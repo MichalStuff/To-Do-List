@@ -19,8 +19,8 @@ const TaskList = (props) => {
         fontSize: "30px",
         fontWeight: "bold"
     }
-    let active = activeTask.length !==0 ? activeTask : <div style={style}>No more active tasks</div> 
-    let done = doneTask.length !==0 ? doneTask : <div style={style}>There is no done tasks</div> 
+    let active = activeTask.length !==0 ? activeTask : <h1>No more active tasks</h1> 
+    let done = doneTask.length !==0 ? doneTask : <h1>There is no done tasks</h1> 
 
     return (
         <>

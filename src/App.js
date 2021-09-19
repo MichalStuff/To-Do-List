@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
 import TaskList from './components/TaskList';
 
 class App extends Component {
@@ -18,14 +17,6 @@ class App extends Component {
    }
 
    componentDidMount (){
-    // fetch('data.json')
-    // .then(response => response.json())
-    // .then(response => {
-    //   this.setState({
-    //     task: response.task,
-    //     isLoaded : true
-    //   })
-    // })
     this.getLocalToDo()
    }
 
@@ -115,7 +106,7 @@ class App extends Component {
       <div className="app">
         <div className="add_app">
           <form onSubmit={this.handleFormSubmit} >
-              <input type="text" placeholder="Wpisz text" value={this.state.tempText} onChange={this.handleText}/>
+              <input type="text" placeholder="Add new task" value={this.state.tempText} onChange={this.handleText}/>
               <button className="add"><i className="fas fa-plus"></i></button>
           </form>
         </div>

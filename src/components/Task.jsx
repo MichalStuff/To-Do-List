@@ -5,11 +5,11 @@ const Task = (props) => {
     return ( 
         <li className="task" key={id}>
             <div className="display">
-                <h1>{text}</h1>
+                <h2>{text}</h2>
                 <p><strong>Started : </strong>{date}</p>
                 {active === false && <p><strong>Done : </strong><em>{doneDate}</em></p>}
             </div>
-
+            <div className="icons">
             <div className="delete" onClick={()=>{props.delete(id)}}>
                 <i className="fas fa-trash" ></i>
             </div>
@@ -20,7 +20,7 @@ const Task = (props) => {
                 <div className="redo" onClick={()=>{props.undo(id)}}>
                 <i className="fas fa-undo"></i>
                 </div> }
-            
+            </div>
         </li>
      );
 }
